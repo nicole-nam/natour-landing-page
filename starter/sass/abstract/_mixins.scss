@@ -22,14 +22,17 @@
 1800px +: big desktop
 */
 
-
 /* 
+
 $breakpoint argument choices:
 
 -phone
 -tab-port
 -tab-land
 -big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
 
 */
 
@@ -38,15 +41,18 @@ $breakpoint argument choices:
     @media (max-width: 600px) {
       @content;
     }
-  }  @if $breakpoint == tab-port {
+  }
+  @if $breakpoint == tab-port {
     @media (max-width: 900px) {
       @content;
     }
-  }  @if $breakpoint == tab-land {
+  }
+  @if $breakpoint == tab-land {
     @media (max-width: 1200px) {
       @content;
     }
-  }  @if $breakpoint == big-desktop {
+  }
+  @if $breakpoint == big-desktop {
     @media (min-width: 1800px) {
       @content;
     }

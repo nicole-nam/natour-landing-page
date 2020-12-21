@@ -6,12 +6,16 @@
 1800px +: big desktop
 */
 /* 
+
 $breakpoint argument choices:
 
 -phone
 -tab-port
 -tab-land
 -big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
 
 */
 *,
@@ -27,9 +31,34 @@ html {
   font-size: 62.5%;
 }
 
+@media (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (min-width: 1800px) {
+  html {
+    font-size: 75%;
+  }
+}
+
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding: 3rem;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 0;
+  }
 }
 
 body {
@@ -37,7 +66,6 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
 }
 
 .heading-primary {
