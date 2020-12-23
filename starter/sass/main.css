@@ -943,12 +943,14 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
   z-index: 5000;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .popup__content {
@@ -957,7 +959,7 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 75%;
+  width: 80%;
   border-radius: 3px;
   -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
@@ -967,8 +969,8 @@ body {
   opacity: 0;
   -webkit-transform: translate(-50%, -50%) scale(0.25);
           transform: translate(-50%, -50%) scale(0.25);
-  -webkit-transition: all .5s .2s;
-  transition: all .5s .2s;
+  -webkit-transition: all 0.5s 0.2s;
+  transition: all 0.5s 0.2s;
 }
 
 @media (max-width: 600px) {
@@ -1141,10 +1143,10 @@ body {
   position: relative;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 600px), (min-resolution: 192dpi) and (min-width: 600px), (min-width: 2000px) {
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
   .header {
-    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url("../img/hero.jpg");
-    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 185, 0, 0.8)), to(rgba(40, 180, 133, 0.8))), url("../img/hero.jpg");
+    background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
   }
 }
 
